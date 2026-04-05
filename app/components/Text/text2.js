@@ -39,20 +39,21 @@ export const Btn = ({ type = "black", children, linkss }) => {
   );
 };
 
-export const Images = ({ alt, classnames, source }) => {
+export const Images = ({ alt, classnames, className, source }) => {
   const image = {
     imageheading: "h-[50vh] w-[50vw] rounded object-cover object-center",
-    icon: "h-[5vh] w-[5vh]",
+    icon: "h-[5vh] w-[5vh] object-cover",
     search: "h-[3vh] w-[3vh]",
   };
 
+  
   return (
     <Image
       src={source}
       alt={alt}
       width={500}
       height={500}
-      className={image[classnames]}
+      className={ `${image[classnames]} ${className}` }
     />
   );
 };
