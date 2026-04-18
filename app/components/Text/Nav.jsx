@@ -1,12 +1,13 @@
-
 import Image from "next/image";
-import { Images, Elem,Btn ,figtree} from ".././Text/text2";
+import { Imagess, Elem, Btn, figtree } from ".././Text/text2";
 
 export default function Nav() {
   return (
-    <nav className={`w-full h-[10vh] flex items-center justify-between px-[5vw]  grid grid-cols-11 ${figtree.className}`}>
+    <nav
+      className={`w-full h-[10vh] flex items-center justify-between px-[5vw]  grid grid-cols-11 ${figtree.className}`}
+    >
       <div className="text-2xl font-bold  flex col-start-1  ">
-        <Images
+        <Imagess
           source="/TechCompareIcon.png"
           classnames="icon"
           alt="TechCompare Icon"
@@ -14,11 +15,7 @@ export default function Nav() {
         TechCompare
       </div>
       <div className="flex items-center gap-[1vw] col-start-8 col-span-2 text-black">
-        <Images
-          source="/search.png"
-          classnames="search"
-          alt="Search Icon"
-        />
+        <Imagess source="/search.png" classnames="search" alt="Search Icon" />
         <Elem type="paragraph" page="/">
           Home
         </Elem>
@@ -32,11 +29,13 @@ export default function Nav() {
           Saved
         </Elem>
       </div>
-      <div id="authentication" className="flex  col-start-11 col-span-2 justify-end ">
+      <div
+        id="authentication"
+        className="flex  col-start-11 col-span-2 justify-end "
+      >
         <Btn type="white" linkss="/">
-          Sign Up/In 
+          Sign Up/In
         </Btn>
-       
       </div>
     </nav>
   );

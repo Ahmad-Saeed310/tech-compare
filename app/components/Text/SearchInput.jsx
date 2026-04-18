@@ -1,15 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import { Btn } from "./text2";
+import {Texts} from "./text2"
+
 
 export default function SearcInput() {
   const [words, setWord] = useState("");
 
-  const wordss = ["Best Student Laptops", "Best CPU’s ", "Best Monitors", "Best TVs","Best Cordless Vaccumes"];
+  const wordss = ["yes","Best Student Laptops", "Best CPU’s ", "Best Monitors", "Best TVs","Best Cordless Vaccumes"];
 
-  const checkEqual =(wo)=>{
-    wo === "yes" ?  alert("its is") : alert("itsnot");;
-  }
+  const checkEqual = n =>   n === "yes" ?  console.log("it is") : console.log("itsnot");  
+
+
+  const [change , setChange] = useState("Changes")
+    
 
   return (
     <>
@@ -24,6 +29,7 @@ export default function SearcInput() {
           value={words}
           onChange={(e) => {
             setWord(e.target.value);
+            
           }}
           placeholder="Search"
         />
@@ -34,6 +40,12 @@ export default function SearcInput() {
           <p key={w} onClick={()=>(setWord(w))} className="text-black">{w}</p>
         ))}
       </div>
+      
+<Texts children={change} type="heading" />
+
+      <Btn childrenS="Check" onClick={() => {setChange(words)}}/>
+
+
       
       </div>
     </>

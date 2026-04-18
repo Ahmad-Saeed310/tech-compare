@@ -23,7 +23,6 @@ export const Searchh = ({ searchBar }) => {
           value={words}
           onChange={(e) => setWord(e.target.value)}
           className={design.searchBar1}
-          
         />
       </form>
 

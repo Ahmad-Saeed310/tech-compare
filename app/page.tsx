@@ -6,9 +6,20 @@ import SearchInputss from "./components/Text/SearchInput.jsx";
 
 import Imagesss from "./components/images/Images";
 
+
+import BluePrint from "./Blueprint"
+
 export default function Home() {
   return (
     <>
+
+<div id="BluePrint" className="w-full h-screen bg-stone-50">
+
+<BluePrint/>
+
+
+</div>
+
       <div className="h-screen w-full bg-white  flex flex-col itms-center ">
         <Nav />
         <Heading />
