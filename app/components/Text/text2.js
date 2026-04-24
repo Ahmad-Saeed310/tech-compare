@@ -6,6 +6,7 @@ const Texttypes = {
   heading: `text-5xl text-black font-bold   ${figtree.className}`,
   subheading: `text-4xl text-black  font-medium   ${figtree.className}`,
   paragraph: `text-base text-black font-normal  ${figtree.className}`,
+  Box: `bg-gray-200 rounded-lg h-[50vh] w-[50vw]`,
 };
 
 export const figtree = Figtree({
@@ -23,8 +24,6 @@ export const Texts = ({ type = "paragraph", children }) => {
 };
 
 export const Links = ({ link, children, types = "heading" }) => {
- 
-
   // const Texttypes = {
   //   heading: `text-5xl text-black font-bold   ${figtree.className}`,
   //   subheading: `text-4xl text-black  font-medium   ${figtree.className}`,
@@ -32,8 +31,6 @@ export const Links = ({ link, children, types = "heading" }) => {
   // };
 
   return (
-    
-
     <a href={link} className={Texttypes[types]}>
       {children}
     </a>
@@ -49,15 +46,19 @@ export const Btn = ({ type = "black", childrenS, linkss, onClick }) => {
   };
 
   return (
-    <button className={` ${types[type]} ${Texttypes[type]}`} href={linkss} onClick={onClick}>
+    <button
+      className={` ${types[type]} ${Texttypes[type]}`}
+      href={linkss}
+      onClick={onClick}
+    >
       {childrenS}
     </button>
   );
 };
 
-export const Imagess = ({ alt, classnames, className, source ,type }) => {
+export const Imagess = ({ alt, classnames, className, source, type }) => {
   const image = {
-    imageheading: "h-[50vh] w-[50vw] rounded object-cover object-center",
+    imageheading: "h-[50vh] w-[50vw] rounded object-cover  ",
     icon: "h-[5vh] w-[5vh] object-cover",
     search: "h-[3vh] w-[3vh]",
   };
@@ -87,4 +88,8 @@ export const Elem = ({ type = "paragraph", children, page }) => {
       {children}
     </a>
   );
+};
+
+export const Box = ({ childrens, className,classname }) => {
+  return <div className={`${Texttypes[classname]} ${className}`}>{childrens}</div>;
 };
