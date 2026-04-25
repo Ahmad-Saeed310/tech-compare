@@ -54,6 +54,7 @@ export const Page2 = () => {
               <Texts type="subheading">Kitchen</Texts>
 
               {/* <Imagess source="/camera.png" classnames="imageheading" /> */}
+              {/* changes */}
             </>
           }
         />
